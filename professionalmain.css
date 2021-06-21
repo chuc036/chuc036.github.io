@@ -236,8 +236,8 @@ a:hover{
 }
 
  #posterbtn{
-     width: 30%;
-    
+     width: 55%;
+    padding: 15px;
  }
 
 .projtitle{
@@ -268,3 +268,18 @@ a:hover{
   margin-bottom:2%;
   margin: 0 auto
 }
+
+#miscPg{
+  width: 50%;
+  left: 40%;
+  top: 5%;
+  position: relative;
+  display: none;
+}
+
+.video{
+  position: relative;
+  display: inline-block;
+  padding: 15px;
+}
+
