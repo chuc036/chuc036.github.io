@@ -175,11 +175,12 @@ body{
  }
 
  #editorialPg{
-     width: 50%;
-     left: 40%;
-     top: 5%;
-     position: absolute;
-     display: none;
+  width: 50%;
+  height: 95%;
+  left: 50%;
+  position: absolute;
+  overflow-y: auto;
+  display: none;
  }
 
  #commandPg{
@@ -204,11 +205,23 @@ body{
   cursor: ns-resize;
  }
 
+ #divPg{
+  width: 60%;
+  height: 95%;
+  overflow-y: auto;
+  position: absolute;
+  left: 45%;
+  top: 2%;
+  display: none;
+  cursor: ns-resize;
+ }
+
  #webPg{
   width: 50%;
-  left: 40%;
-  top: 5%;
+  height: 95%;
+  left: 50%;
   position: absolute;
+  overflow-y: auto;
   display: none;
 }
 
@@ -262,7 +275,7 @@ a:hover{
 }
 
 .projimgBig{
-  width: 58%;
+  width: 60%;
   padding: 15px;
   margin-top:2%;
   margin-bottom:2%;
@@ -271,9 +284,10 @@ a:hover{
 
 #miscPg{
   width: 50%;
-  left: 40%;
-  top: 5%;
+  height: 95%;
+  left: 50%;
   position: absolute;
+  overflow-y: auto;
   display: none;
 }
 

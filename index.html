@@ -125,6 +125,14 @@
 
 <div id="webPg">
 
+    <div id="render1" class="imgLink">
+        <a href="https://bfacd.parsons.edu/2021/christopher-chu" target="blank">
+            <img src="revoltreduced.gif" id="posterbtn"><br><br>
+                36 Narrative Experience
+        </a>
+       
+    </div>
+
     <div id="baldwin" class="imgLink">
         <a href="https://chu.graphics/baldwin/JamesB.html" target="blank">
                 <img src="baldwin.png" id="posterbtn"><br><br>
@@ -142,17 +150,10 @@
 </div>
 
 
+
 <!--MISC-->
 
 <div id="miscPg">
-
-<div id="render1" class="imgLink">
-    <a href="https://www.youtube.com/watch?v=oq78L072pIM" target="blank">
-        <img src="revoltreduced.gif" id="posterbtn"><br><br>
-            36 Narrative Experience
-    </a>
-   
-</div>
 
 <div id="render2" class="imgLink">
     <a href="https://www.youtube.com/watch?v=h9d2JBTAsGg" target="blank">
@@ -161,10 +162,43 @@
     </a>
 </div>
 
-
+<div id="jewelry" class="imgLink">
+    <img src="KGSC4058.JPG" id="posterbtn"><br><br>
+    Omniuser Div Jewelry Collection
+</div>
 
 </div>
 
+
+<div id="divPg">
+
+    <div class="projtitle">
+        Omniuser Div Jewelry Line
+    </div>
+    
+    <img src="tyad.png" class="projimgBig">
+    
+    <div class="projtext">  
+        Omniuser Div is a jewelry project about internet users and the superficial structure of front end HTML structure.
+        The peices are made of crystal cupchain to mimic the rigid structure of web design, and are saudered in the shape of glyphs and 
+        UI elements. Some pieces were not able to go into production due to COVID-19, but I was able to complete the centerpieces of the collection.
+    </div>
+    
+    <img src="flatsmeasures.png" class="projimgBig">
+    
+    <div class="projtext">  
+        This project challenged me to learn new skills while allowing me to approach the design with a concept that
+        filled a specific purpose in the accessories market: Bold, Cheeky, modern statement jewelry focused towards
+        denizens of silicon valley.
+     </div>
+    
+    <img src="displayjewelry.png" class="projimgBig">
+    
+    <div class="projtext">  
+        Photogrohed on Ty Walker and me, photos by Jehan Vazifdar
+     </div>
+    
+</div>
 
 
 
@@ -247,6 +281,7 @@ $("#editorial").click(function(){
              //no projects
              $("#joePg").css('display','none')
             $('#commandPg').css('display','none')
+            $('#divPg').css('display','none')
 
 
             //no states
@@ -299,6 +334,7 @@ $("#web").click(function(){
 
         $("#joePg").css('display','none')
         $('#commandPg').css('display','none')
+        $('#divPg').css('display','none')
 
         $("#about").css('background-color','transparent')
         $("#about").css('color','black')
@@ -330,6 +366,7 @@ $("#miscPg").toggle()
 
          $("#joePg").css('display','none')
         $('#commandPg').css('display','none')
+        $('#divPg').css('display','none')
 
          $("#web").css('background-color','transparent')
          $("#web").css('color','black')
@@ -346,6 +383,11 @@ $("#miscPg").toggle()
 
         }
 });
+
+$("#jewelry").click(function(){
+    $("#miscPg").css('display','none')
+    $("#divPg").css('display','block')
+})
 
 </script>
     
