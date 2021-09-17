@@ -17,7 +17,7 @@ body{
     font-size: 2vw;
     position: absolute;
     margin-left: 3%;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 102%;
    bottom: 54%;
@@ -181,6 +181,7 @@ body{
   position: absolute;
   overflow-y: auto;
   display: none;
+  transition: 1s ease-in-out
  }
 
  #commandPg{
@@ -195,6 +196,17 @@ body{
  }
 
  #joePg{
+  width: 60%;
+  height: 95%;
+  overflow-y: auto;
+  position: absolute;
+  left: 45%;
+  top: 2%;
+  display: none;
+  cursor: ns-resize;
+ }
+
+ #vazifdarPg{
   width: 60%;
   height: 95%;
   overflow-y: auto;
@@ -223,10 +235,12 @@ body{
   position: absolute;
   overflow-y: auto;
   display: none;
+  transition: 1s ease-in-out
 }
 
  .imgLink{
      width: 55%;
+     color: blue;
      padding: 10px;
      text-align: center;
      display: inline-block;
@@ -236,6 +250,7 @@ body{
 
  .imgLink:hover{
    color:blue;
+   text-decoration: underline;
    cursor: pointer;
  }
 
@@ -243,24 +258,31 @@ a{
   text-decoration: none;
 }
 
+a:visited{
+  color: blue
+}
+
 a:hover{
   color: blue;
+  text-decoration: underline;
   cursor: pointer;
 }
 
  #posterbtn{
      width: 55%;
+     margin-top: 2%;
     padding: 15px;
  }
 
 .projtitle{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.8vw;
-  font-weight: 500;
+  font-weight: 800;
 }
 
 .projtext{
   width: 70%;
+  
   font-size: 1.2vw;
   font-family: Arial, Helvetica, sans-serif;
   margin-top:1%;
@@ -282,7 +304,22 @@ a:hover{
   margin: 0 auto
 }
 
+#textbackground{
+  background-color: white;
+  padding: 5px;
+}
+
 #miscPg{
+  width: 50%;
+  height: 95%;
+  left: 50%;
+  position: absolute;
+  overflow-y: auto;
+  display: none;
+  transition: 1s ease-in-out
+}
+
+#miramuiPg{
   width: 50%;
   height: 95%;
   left: 50%;
@@ -297,3 +334,7 @@ a:hover{
   padding: 15px;
 }
 
+#insta{
+  color: white;
+  text-decoration: underline;
+}
