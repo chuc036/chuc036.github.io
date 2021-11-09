@@ -133,35 +133,24 @@ body{
       }
   }
 
-  @keyframes slide{
-      0%{
-          left: 100%;
-      }
-      100%{
-          left: 56%;
-      }
-  }
-
  #aboutPg{
-    position: absolute;
-    left: 56%;
-    top: 20%;
-    width: 45%;
-    z-index: 1;
-    background-color: blue;
-    color: white;
-    padding: 20px;
-    display: none;
-    animation-name: slide;
-    animation-duration: 1s;
-    animation-iteration-count: once;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
+  width: 60%;
+  margin-top: 25px;
+  height: 95%;
+  overflow-y: auto;
+  position: absolute;
+  left: 45%;
+  top: 2%;
+  display: none;
+  cursor: ns-resize;
+   
  }
 
- #portrait{
-    width: 35%;
-}
+ .abttext{
+   font-size: 1.5vw;
+   width: 60%;
+   font-family: Arial, Helvetica, sans-serif;
+ }
 
  .textblock{
      width: 45%;
@@ -175,16 +164,30 @@ body{
  }
 
  #editorialPg{
+  margin-top: 25px;
   width: 50%;
   height: 95%;
   left: 50%;
   position: absolute;
   overflow-y: auto;
   display: none;
-  transition: 1s ease-in-out
+  cursor: ns-resize;
+ }
+
+ #secondshiftPg{
+  margin-top: 25px;
+   width: 60%;
+   height: 95%;
+   overflow-y: auto;
+   position: absolute;
+   left: 45%;
+   top: 2%;
+   display: none;
+   cursor: ns-resize;
  }
 
  #commandPg{
+  margin-top: 25px;
    width: 60%;
    height: 95%;
    overflow-y: auto;
@@ -196,6 +199,7 @@ body{
  }
 
  #joePg{
+  margin-top: 25px;
   width: 60%;
   height: 95%;
   overflow-y: auto;
@@ -207,6 +211,7 @@ body{
  }
 
  #vazifdarPg{
+  margin-top: 25px;
   width: 60%;
   height: 95%;
   overflow-y: auto;
@@ -218,6 +223,7 @@ body{
  }
 
  #divPg{
+  margin-top: 25px;
   width: 60%;
   height: 95%;
   overflow-y: auto;
@@ -229,13 +235,14 @@ body{
  }
 
  #webPg{
+  margin-top: 25px;
   width: 50%;
   height: 95%;
   left: 50%;
   position: absolute;
   overflow-y: auto;
   display: none;
-  transition: 1s ease-in-out
+  
 }
 
  .imgLink{
@@ -270,7 +277,7 @@ a:hover{
 
  #posterbtn{
      width: 55%;
-     margin-top: 2%;
+     margin-top: 25px;
     padding: 15px;
  }
 
@@ -281,8 +288,7 @@ a:hover{
 }
 
 .projtext{
-  width: 70%;
-  
+  width: 65%;
   font-size: 1.2vw;
   font-family: Arial, Helvetica, sans-serif;
   margin-top:1%;
@@ -297,11 +303,12 @@ a:hover{
 }
 
 .projimgBig{
-  width: 60%;
-  padding: 15px;
+  width: 65%;
+  padding: 10px;
   margin-top:2%;
   margin-bottom:2%;
-  margin: 0 auto
+  margin: 0 auto;
+  text-align: center;
 }
 
 #textbackground{
@@ -310,16 +317,18 @@ a:hover{
 }
 
 #miscPg{
+  margin-top: 25px;
   width: 50%;
   height: 95%;
   left: 50%;
   position: absolute;
   overflow-y: auto;
   display: none;
-  transition: 1s ease-in-out
+  
 }
 
 #miramuiPg{
+  margin-top: 25px;
   width: 50%;
   height: 95%;
   left: 50%;
@@ -337,4 +346,7 @@ a:hover{
 #insta{
   color: white;
   text-decoration: underline;
+}
+#center{
+  text-align: center;
 }
