@@ -36,7 +36,7 @@ body{
     z-index: -1;
     height: 80%;
     position: absolute;
-    display: block;
+    display: none;
  }
 
 .slide{
@@ -211,15 +211,46 @@ line-height: 80px;;
   }
 
  #aboutPg{
-  margin-top: 11%;
+  margin-top: 5%;
   width: 60%;
   height: 95%;
   left: 45%;
   position: absolute;
   overflow-y: auto;
   display: none;
-   
  }
+
+
+ #editorialPg{
+  margin-top: 5%;
+  width: 60%;
+  height: 95%;
+  margin-left: 40%;
+  position: absolute;
+  overflow-y: auto;
+  display: none;
+ }
+
+ #webPg{
+  margin-top: 5%;
+  width: 60%;
+  height: 95%;
+  margin-left: 40%;
+  position: absolute;
+  overflow-y: auto;
+  display: none;
+}
+
+
+#miscPg{
+  margin-top: 5%;
+  width: 60%;
+  height: 95%;
+  margin-left: 40%;
+  position: absolute;
+  overflow-y: auto;
+  display: none;
+}
 
  .abttext{
    font-size: 1vw;
@@ -239,24 +270,12 @@ line-height: 80px;;
      top: 0%;
  }
 
- #editorialPg{
-  margin-top: 5%;
-  width: 60%;
-  height: 95%;
-  left: 35%;
-  position: absolute;
-  overflow-y: auto;
-  display: none;
- 
- }
-
  #secondshiftPg{
   margin-top: 25px;
    width: 60%;
-   height: 95%;
    overflow-y: auto;
    position: absolute;
-   left: 45%;
+   margin-left: 40%;
    top: 2%;
    display: none;
    cursor: ns-resize;
@@ -265,10 +284,8 @@ line-height: 80px;;
  #commandPg{
   margin-top: 25px;
    width: 60%;
-   height: 95%;
-   overflow-y: auto;
    position: absolute;
-   left: 45%;
+   margin-left: 40%;
    top: 2%;
    display: none;
    cursor: ns-resize;
@@ -277,10 +294,8 @@ line-height: 80px;;
  #joePg{
   margin-top: 25px;
   width: 60%;
-  height: 95%;
-  overflow-y: auto;
   position: absolute;
-  left: 45%;
+  margin-left: 40%;
   top: 2%;
   display: none;
   cursor: ns-resize;
@@ -289,10 +304,8 @@ line-height: 80px;;
  #vazifdarPg{
   margin-top: 25px;
   width: 60%;
-  height: 95%;
-  overflow-y: auto;
   position: absolute;
-  left: 45%;
+  margin-left: 40%;
   top: 2%;
   display: none;
   cursor: ns-resize;
@@ -301,25 +314,38 @@ line-height: 80px;;
  #divPg{
   margin-top: 25px;
   width: 60%;
-  height: 95%;
-  overflow-y: auto;
   position: absolute;
   left: 45%;
-  top: 2%;
   display: none;
   cursor: ns-resize;
  }
 
- #webPg{
-  margin-top: 5%;
+ #baldwinPg{
+  margin-top: 25px;
+  width: 68%;
+  left: 20%;
+  position: absolute;
+  display: none;
+}
+
+#render2Pg{
+  margin-top: 25px;
+  width: 68%;
+  left: 20%;
+  position: absolute;
+  display: none;
+}
+
+#miramuiPg{
+  margin-top: 25px;
   width: 60%;
-  height: 95%;
-  left: 35%;
+  left: 45%;
   position: absolute;
   overflow-y: auto;
   display: none;
-  
 }
+
+
 
  .imgLink{
      width: 25%;
@@ -329,6 +355,7 @@ line-height: 80px;;
      display: inline-block;
      font-size: .9vw;
      margin-left: 3%;
+     margin-top: -2%;
      font-family: Arial, Helvetica, sans-serif;
  }
 
@@ -352,6 +379,12 @@ a:hover{
   cursor: pointer;
 }
 
+.video{
+width: 100%;
+height: 610px;
+
+}
+
  #posterbtn{
      width: 55%;
      margin-top: 25px;
@@ -371,9 +404,17 @@ a:hover{
   margin-top:1%;
   margin-bottom:1%;
 }
+.projtext-body{
+  width: 65%;
+  font-size: 1vw;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top:2%;
+  margin-bottom:2%;
+}
 
 .projimg{
-  width: 30%;
+  width: 32%;
+  text-align: center;
   padding: 15px;
   margin-top:2%;
   margin-bottom:2%;
@@ -381,37 +422,15 @@ a:hover{
 
 .projimgBig{
   width: 65%;
-  padding: 10px;
+  padding: 15px;
   margin-top:2%;
   margin-bottom:2%;
-  margin: 0 auto;
   text-align: center;
 }
 
 #textbackground{
   background-color: white;
   padding: 5px;
-}
-
-#miscPg{
-  margin-top: 5%;
-  width: 60%;
-  height: 95%;
-  left: 35%;
-  position: absolute;
-  overflow-y: auto;
-  display: none;
-  
-}
-
-#miramuiPg{
-  margin-top: 25px;
-  width: 50%;
-  height: 95%;
-  left: 50%;
-  position: absolute;
-  overflow-y: auto;
-  display: none;
 }
 
 .video{
