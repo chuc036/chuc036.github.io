@@ -10,16 +10,16 @@
 </head>
 <body>
 
+    <div class="menu">
+        <div id="about">about</div>
+        <div id="editorial">editorial</div>
+        <div id="web">web</div>
+        <div id="misc">misc</div>
+    </div>    
+
 
 <div class="icon">
-    <img id="hand" src="limpwrist.png">
-</div>
-
-<div class="menu">
-    <div id="about">about</div>
-    <div id="editorial">editorial</div>
-    <div id="web">web</div>
-    <div id="misc">misc</div>
+    <a class="removable" href="index.html"><img id="hand" src="limpwrist.png">home</a>
 </div>
 
 <div class="bigtext">
@@ -29,8 +29,25 @@
 
 <div class="statement">
     <div id="placeholder">
-        Hello!
+        Welcome!
     </div>
+</div>
+
+<div class="slideshow">
+   <div class="slide">
+       <img src="openlineup.jpg" id="slideshow-img">
+       Vazifdar Branding
+    </div>
+
+    <div class="slide">
+        <img src="miramuiinsta3.png" id="slideshow-img">
+        Miramui Branding
+     </div>
+
+     <div class="slide">
+        <img src="displayjewelry.png" id="slideshow-img">
+        Omniuser Div Jewelry
+     </div>
 </div>
 
 <!--BEGINNING OF CONTENT-->
@@ -62,24 +79,24 @@
 <div id="editorialPg">
 
     <div id="miramui" class="imgLink">
-        <img src="miramuilogotransparent-01.png" id="posterbtn"><br>
+        <img src="miramuilogotransparent-01.png" id="posterbtn"><br><br>
             Miramui Branding
-    </div><br><br>
+    </div>
 
     <div id="secondshift" class="imgLink">
-        <img src="secondshift-filled-type.png" id="posterbtn"><br>
+        <img src="secondshift-filled-type.png" id="posterbtn"><br><br>
             Second Shift Branding
-    </div><br><br>
+    </div>
 
 <div id="vazifdar" class="imgLink">
     <img src="vazifdar.png" id="posterbtn"><br><br>
         Vazifdar Branding
-</div><br><br>
+</div>
 
 <div id="command" class="imgLink">
     <img src="deadhorse.jpeg" id="posterbtn"><br><br>
     The Commandments
-</div><br><br>
+</div>
 
 <div id="joe" class="imgLink">
     <img src="killerjoeposter2.jpg" id="posterbtn"><br><br>
@@ -221,8 +238,8 @@
     </div>
 
     <div id="secondshiftweb" class="imgLink">
+        <img src="secondshift-filled-type.png" id="posterbtn"><br><br>
         <a href="https://www.secondshift.live/" target="blank">
-            <img src="secondshift-filled-type.png" id="posterbtn"><br><br>
                 Second Shift Website
         </a>
     </div>
@@ -263,12 +280,12 @@
             <img src="apocalypsesky.png" id="posterbtn"><br><br>
                Apocalypse Render
         </a>
-    </div><br><br>
+    </div>
 
-<div id="jewelry" class="imgLink">
-    <img src="KGSC4058.JPG" id="posterbtn"><br><br>
-    Omniuser Div Jewelry Collection
-</div>
+    <div id="jewelry" class="imgLink">
+        <img src="KGSC4058.JPG" id="posterbtn"><br><br>
+        Omniuser Div Jewelry Collection
+    </div>
 
 </div>
 
@@ -352,9 +369,13 @@
     //RANDOMIZED STATEMENTS
     $(window).on('load', function(){
 
+var images =
+[
+'ad1finalcopy.jpg',''
+]
 
 var sentences = 
-["now with degree!","Chronically online","V.3.???", "FOREVER IMMATERIAL",
+["now with degree!","Chronically online","Click the dot to make me dissapear", "FOREVER IMMATERIAL",
 "certified silver trophy gamer", "my work is on this site!","will use Helvetica (if neccessary)",
 "average type enjoyer", "Has anyone seen my xacto?", "no secrets on this website"];
 
@@ -364,27 +385,61 @@ var sentences =
     console.log("new Statement!")
     $("#placeholder").text(result);
  
-})
+});
+
+//SHRINK ICON
+$("#dot").click(function(){
+            $("#dot").css('display','none')
+            $("#placeholder").addClass("fade")
+            $(".bigtext").addClass("shrink")
+            $(".bigtext").html('CHU.<br>GRAPHICS')
+        });
+
+        
+
+// SLIDESHOW
+
+
 
 //ANIMATION/VISIBILITY
 
 $("#about").click(function(){
     $("#aboutPg").toggle()
 
+    $("#dot").css('display','none')
+            $("#placeholder").addClass("fade")
+            $(".bigtext").addClass("shrink")
+            $(".bigtext").html('CHU.<br>GRAPHICS')
+
     if($('#aboutPg').is(':visible')){
 
         $("#about").css('background-color','blue')
+        $("#about").html('about <')
         $("#about").css('color','white')
 
-        $("#editorialPg").css('opacity', '50%')
-        $("#webPg").css('opacity', '50%')
-        $("#miscPg").css('opacity','50%')
+        $("#misc").html('misc')
+        $("#web").html('web')
+        $("#editorial").html('editorial')
+
+        $("#editorialPg").css('display','none')
+        $("#webPg").css('display','none')
+        $("#miscPg").css('display','none')
+        $(".slideshow").css('display','none')
+
+        $("#web").css('background-color','transparent')
+             $("#web").css('color','black')
+             $("#editorial").css('background-color','transparent')
+             $("#editorial").css('color','black')
+             $("#misc").css('background-color','transparent')
+             $("#misc").css('color','black')
 
     }else{  
 
         $("#editorialPg").css('opacity', '100%')
         $("#webPg").css('opacity', '100%')
         $("#miscPg").css('opacity', '100%')
+        $(".slideshow").css('display','block')
+        $("#about").html('about')
 
 
         $("#about").css('background-color','transparent')
@@ -405,22 +460,28 @@ $("#aboutPg").click(function(){
 $("#editorial").click(function(){
 
     $("#editorialPg").toggle()
+    $("#dot").css('display','none')
+            $("#placeholder").addClass("fade")
+            $(".bigtext").addClass("shrink")
+            $(".bigtext").html('CHU.<br>GRAPHICS')
 
         if($('#editorialPg').is(':visible')){
-
-            //Opacity of menu
-            $("#editorialPg").css('opacity', '100%')
-            $("#webPg").css('opacity', '100%')
 
             //Highlight state on Menu
             $("#editorial").css('background-color','blue')
             $("#editorial").css('color','white')
+            $("#editorial").html('editorial <')
+
+            $("#misc").html('misc')
+            $("#web").html('web')
+            $("#about").html('about')
 
             //no other categories are open
              $("#aboutPg").css('display', 'none')
              $("#miscPg").css('display','none')
              $("#webPg").css('display', 'none')
              $("#aboutPg").css('display','none')
+             $(".slideshow").css('display','none')
 
              //no other projects are open
             $("#joePg").css('display','none')
@@ -443,6 +504,8 @@ $("#editorial").click(function(){
 
                 $("#editorial").css('background-color','transparent')
                 $("#editorial").css('color','black')
+                $("#editorial").html('editorial')
+                $(".slideshow").css('display','block')
 
             }
 });
@@ -490,6 +553,10 @@ $("#secondshift").click(function(){
 $("#web").click(function(){
 
     $("#webPg").toggle()
+    $("#dot").css('display','none')
+            $("#placeholder").addClass("fade")
+            $(".bigtext").addClass("shrink")
+            $(".bigtext").html('CHU.<br>GRAPHICS')
 
     if($('#webPg').is(':visible')){
         //highlight state
@@ -497,6 +564,10 @@ $("#web").click(function(){
         $("#webPg").css('opacity', '100%')
 
         $("#web").css('background-color','blue')
+        $("#web").html('web <')
+        $("#misc").html('misc')
+        $("#editorial").html('editorial')
+        $("#about").html('about')
         $("#web").css('color','white')
 
         //no other pages
@@ -508,6 +579,7 @@ $("#web").click(function(){
         $("#aboutPg").css('display', 'none')
         $("#miscPg").css('display','none')
         $("#editorialPg").css('display', 'none')
+        $(".slideshow").css('display', 'none')
 
         //NO PROJECTS FROM OTHER CATEGORIES
 
@@ -527,7 +599,8 @@ $("#web").click(function(){
 
         $("#web").css('background-color','transparent')
         $("#web").css('color','black')
-
+        $("#web").html('web')
+        $(".slideshow").css('display', 'block')
     }
 
 })
@@ -535,6 +608,10 @@ $("#web").click(function(){
 $("#misc").click(function(){
 
 $("#miscPg").toggle()
+$("#dot").css('display','none')
+            $("#placeholder").addClass("fade")
+            $(".bigtext").addClass("shrink")
+            $(".bigtext").html('CHU.<br>GRAPHICS')
 
     if($('#miscPg').is(':visible')){
 
@@ -542,11 +619,16 @@ $("#miscPg").toggle()
         $("#webPg").css('opacity', '100%')
 
         $("#misc").css('background-color','blue')
+        $("#misc").html('misc <')
+        $("#web").html('web')
+        $("#editorial").html('editorial')
+        $("#about").html('about')
         $("#misc").css('color','white')
 
          $("#aboutPg").css('display', 'none')
          $("#editorialPg").css('display','none')
          $("#webPg").css('display', 'none')
+         $(".slideshow").css('display', 'none')
 
          $("#joePg").css('display','none')
         $('#commandPg').css('display','none')
@@ -566,7 +648,10 @@ $("#miscPg").toggle()
         }else{
 
             $("#misc").css('background-color','transparent')
+            $("#misc").html('misc')
             $("#misc").css('color','black')
+
+            $(".slideshow").css('display', 'block')
 
         }
 });

@@ -2,28 +2,58 @@ body{
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    overflow-y:hidden;
+   
    
   }
   
   .icon{
-    position: absolute;
+    position: fixed;
+    text-align: center;
     margin-top: 3%;
-    width: 10%;
-    left: 88%;
+    line-height: 30px;
+    width: 8%;
+    left: 90%;
+    z-index: 2;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   .menu{
     font-size: 2vw;
-    position: absolute;
+    position: fixed;
     margin-left: 3%;
-    margin-bottom: 10%;
+    margin-top: 3%;
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 102%;
-   bottom: 54%;
+    line-height: 103%;
     z-index: 1;
-    width: 8%
+    width: 10%
   }
+
+  .slideshow{
+    width: 60%;
+    margin-left: 27%;
+    margin-top: 3%;
+    cursor: ns-resize;
+    z-index: -1;
+    height: 80%;
+    position: absolute;
+    display: block;
+ }
+
+.slide{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800px;
+  font-size: 2.4vw;
+  text-align: right;
+  margin-bottom: 5%;
+line-height: 80px;;
+}
+
+ .slideshow img{
+    width: 100%;
+    height: auto;
+ }
+
+  
 
   #about{
       padding: 5px;
@@ -74,36 +104,83 @@ body{
   }
 
   .bigtext{
-      font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
       font-weight: 800;
       line-height: 90%;
-      font-size: 13vw;
-      position: absolute;
+      font-size: 11vw;
+      position: fixed;
       margin-left: 2%;
-      bottom: 8%;
+      bottom: 5%;
+      display: block;
       cursor: default;
+
   }
+
+  .shrink{
+    animation-name: shrinkaway;
+    animation-iteration-count: 1;
+    animation-direction: inherit;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    
+  }
+
+
+  @keyframes shrinkaway{
+    0%{
+      font-weight: 800;
+      line-height: 90%;
+      font-size: 11vw;
+      margin-left: 2%;
+      bottom: 5%;
+      width: 50px;
+    }
+    100%{
+      font-weight: 800;
+      line-height: 90%;
+      bottom: 4%;
+      font-size: 4vw;
+    }
+  }
+
+  @keyframes fade{
+    0%{
+      opacity: 100;
+    }
+    100%{
+      opacity: 0;
+      display: none;
+    }
+  }
+
+  .fade{
+    animation-name: fade;
+    animation-iteration-count: 1;
+    animation-direction: inherit;
+    animation-fill-mode: forwards;
+    animation-duration: .3s;
+  }
+
 
   #dot{
       background-color: black;
-      width: 50px;
-      height: 50px;
+      width: 25px;
+      height: 25px;
+      margin-left:2px;
       color: black;
-      border-radius: 50%;
       display: inline-block;
       cursor: pointer;
   }
 
   #dot:hover{
-      width:100px;
-      height: 100px;
-      background-color: blue;
-      transition: 1s ease-in-out;
+    background-color: blue;
+    transition: .5s ease-in-out;
   }
+
 
   .statement{
       font-size: 3.5vw;;
-      position: absolute;
+      position: fixed;
       bottom: 10%;
       color: blue;
       font-style: italic;
@@ -134,21 +211,20 @@ body{
   }
 
  #aboutPg{
+  margin-top: 11%;
   width: 60%;
-  margin-top: 25px;
   height: 95%;
-  overflow-y: auto;
-  position: absolute;
   left: 45%;
-  top: 2%;
+  position: absolute;
+  overflow-y: auto;
   display: none;
-  cursor: ns-resize;
    
  }
 
  .abttext{
-   font-size: 1.5vw;
+   font-size: 1vw;
    width: 60%;
+   left:35%;
    font-family: Arial, Helvetica, sans-serif;
  }
 
@@ -164,14 +240,14 @@ body{
  }
 
  #editorialPg{
-  margin-top: 25px;
-  width: 50%;
+  margin-top: 5%;
+  width: 60%;
   height: 95%;
-  left: 50%;
+  left: 35%;
   position: absolute;
   overflow-y: auto;
   display: none;
-  cursor: ns-resize;
+ 
  }
 
  #secondshiftPg{
@@ -235,10 +311,10 @@ body{
  }
 
  #webPg{
-  margin-top: 25px;
-  width: 50%;
+  margin-top: 5%;
+  width: 60%;
   height: 95%;
-  left: 50%;
+  left: 35%;
   position: absolute;
   overflow-y: auto;
   display: none;
@@ -246,12 +322,13 @@ body{
 }
 
  .imgLink{
-     width: 55%;
+     width: 25%;
+     padding: 5px;
      color: blue;
-     padding: 10px;
      text-align: center;
      display: inline-block;
-     font-size: 1.3vw;
+     font-size: .9vw;
+     margin-left: 3%;
      font-family: Arial, Helvetica, sans-serif;
  }
 
@@ -317,10 +394,10 @@ a:hover{
 }
 
 #miscPg{
-  margin-top: 25px;
-  width: 50%;
+  margin-top: 5%;
+  width: 60%;
   height: 95%;
-  left: 50%;
+  left: 35%;
   position: absolute;
   overflow-y: auto;
   display: none;
