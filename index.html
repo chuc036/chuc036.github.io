@@ -34,17 +34,17 @@
 </div>
 
 <div class="slideshow">
-   <div class="slide">
-       <img src="openlineup.jpg" id="slideshow-img">
+   <div id="homepage1" class="imgLink">
+       <img src="vazifdarsite.gif" id="slideshow-img">
        Vazifdar Branding
     </div>
 
-    <div class="slide">
-        <img src="miramuiinsta3.png" id="slideshow-img">
+    <div id="homepage2" class="imgLink">
+        <img src="miramuipapersample.png" id="slideshow-img">
         Miramui Branding
      </div>
 
-     <div class="slide">
+     <div id="homepage3" class="imgLink">
         <img src="displayjewelry.png" id="slideshow-img">
         Omniuser Div Jewelry
      </div>
@@ -83,7 +83,7 @@
     </div>
 
     <div id="miramui" class="imgLink">
-        <img src="miramuilogotransparent-01.png" id="posterbtn"><br>
+        <img src="miramuipapersample.png" id="posterbtn"><br>
             Miramui Branding
     </div>
 
@@ -93,7 +93,7 @@
     </div>
 
 <div id="vazifdar" class="imgLink">
-    <img src="vazifdar.png" id="posterbtn"><br>
+    <img src="vazifdarsite.gif" id="posterbtn"><br>
         Vazifdar Branding
 </div>
 
@@ -272,8 +272,11 @@
         <img src="taraspread.jpg" class="projimgBig">
 
         <div class="projtext">  
-        For more on the project, please visit <a href="jehanvazifdar.com" target="blank">Jehan's website.</a>
-        </div>
+            For more on the project, please visit <a href="jehanvazifdar.com" target="blank">Jehan's website.</a>
+            </div>
+
+        <img src="vazifdarsite.gif" class="projimgBig">
+
         </div>
 
 
@@ -287,7 +290,7 @@
 
     <div id="miramuiweb" class="imgLink">
         <a href="https://www.miramuistudio.com/" target="blank">
-            <img src="miramuiinsta copy.png" id="posterbtn"><br>
+            <img src="miramuisite.gif" id="posterbtn"><br>
                 Miramui Website
         </a>
     </div>
@@ -296,6 +299,13 @@
         <img src="secondshift-filled-type.png" id="posterbtn"><br>
         <a href="https://www.secondshift.live/" target="blank">
                 Second Shift Website
+        </a>
+    </div>
+
+    <div id="secondshiftweb" class="imgLink">
+        <img src="vazifdarsite.gif" id="posterbtn"><br>
+        <a href="https://www.jehanvazifdar.com/" target="blank">
+                Jehan Vazifdar Portfolio
         </a>
     </div>
     
@@ -389,16 +399,16 @@
         with a new visual direction and target audience.
     </div>
 
-    <img src="miramuibrandingguide2.jpg" class="projimgBig"><br>
+    <div id="center" class="projtext"><em>Old Logo</em><br>
+        <img src="oldmiramuicircle.png" class="projimg">
+    </div>
 
     <div  class="projtext-body">  
         The original logo broke the word into two parts, and focused on a more illustrative style and neutral color palatte. Miramui's new goal 
         is to connect with consumers with a contemporary sense of dress, while maintaining the ethical and sustainable goal of the brand. Original Logo by Erkhes Batjargal.
      </div>
 
-    <div id="center" class="projtext"><em>Old Logo</em><br>
-        <img src="oldmiramuicircle.png" class="projimg">
-    </div>
+     <img src="mary2extended.png" class="projimgBig">
 
     <div  class="projtext-body">  
         The new logo is a custom typeface that reflects the curviture of the garments and the accents above the i. The long letterforms are long and heavy, like
@@ -411,15 +421,16 @@
     <div class="projtext-body">  
         The production time provided me the abiliity to rework the branding until it was perfect with the clothes. 
     </div>
+    <img src="miramuipapersample.png" class="projimgBig"><br>
 
-    <img src="mary2extended.png" class="projimgBig">
 
     <img src="miramuiinsta copy.png" class="projimg">
     <img src="miramuiinsta2 copy.png" class="projimg">
 
-    <img src="georgiaextended copy.png" class="projimgBig">
 
-    <img src="miramuiinsta3.png" class="projimgBig"><br>
+    <img src="miramuisite.gif" class="projimgBig">
+
+    <img src="miramuiinsta3.png" class="projimgBig">
 
 
     <br><br>
@@ -484,8 +495,6 @@ var sentences =
  
 });
 
-$(".slideshow").css('display','block')
-
 //SHRINK ICON
 $("#dot").click(function(){
             $("#dot").css('display','none')
@@ -494,11 +503,41 @@ $("#dot").click(function(){
             $(".bigtext").html('CHU.<br>GRAPHICS')
         });
 
+        $("#homepage1").click(function(){
+            $("#dot").css('display','none')
+            $("#placeholder").addClass("fade")
+            $(".bigtext").addClass("shrink")
+            $(".bigtext").html('CHU.<br>GRAPHICS')
+
+            $(".slideshow").css('display','none');
+            $("#vazifdarPg").css('display','block')
+            $('html, body').animate({scrollTop: '0px'}, 0);
+        });
+
+        $("#homepage2").click(function(){
+            $("#dot").css('display','none')
+            $("#placeholder").addClass("fade")
+            $(".bigtext").addClass("shrink")
+            $(".bigtext").html('CHU.<br>GRAPHICS')
+
+            $(".slideshow").css('display','none');
+            $("#miramuiPg").css('display','block')
+            $('html, body').animate({scrollTop: '0px'}, 0);
+        });
+
+        $("#homepage3").click(function(){
+            $("#dot").css('display','none')
+            $("#placeholder").addClass("fade")
+            $(".bigtext").addClass("shrink")
+            $(".bigtext").html('CHU.<br>GRAPHICS')
+
+            $(".slideshow").css('display','none');
+            $("#divPg").css('display','block')
+            $('html, body').animate({scrollTop: '0px'}, 0);
+        });
         
 
 // SLIDESHOW
-
-
 
 //ANIMATION/VISIBILITY
 
@@ -567,6 +606,7 @@ $("#aboutPg").click(function(){
 
 $("#editorial").click(function(){
 
+    $('html, body').animate({scrollTop: '0px'}, 0);
     $("#editorialPg").toggle()
     $("#dot").css('display','none')
             $("#placeholder").addClass("fade")
@@ -621,6 +661,7 @@ $("#editorial").click(function(){
 });
 
 $("#command").click(function(){
+    $('html, body').animate({scrollTop: '0px'}, 0);
     $("#vazifdarPg").css('display','none')
     $("#editorialPg").css('display','none')
     $("#commandPg").css('display','block')
@@ -629,6 +670,7 @@ $("#command").click(function(){
 })
 
 $("#miramui").click(function(){
+    $('html, body').animate({scrollTop: '0px'}, 0);
     $("#miscPg").css('display','none')
     $("#divPg").css('display','none')
     $("#editorialPg").css('display','none')
@@ -637,6 +679,7 @@ $("#miramui").click(function(){
 })
 
 $("#joe").click(function(){
+    $('html, body').animate({scrollTop: '0px'}, 0);
     $("#vazifdarPg").css('display','none')
     $("#editorialPg").css('display','none')
     $("#secondshiftPg").css('display','none')
@@ -645,6 +688,7 @@ $("#joe").click(function(){
 })
 
 $("#vazifdar").click(function(){
+    $('html, body').animate({scrollTop: '0px'}, 0);
     $("#vazifdarPg").css('display','block')
     $("#editorialPg").css('display','none')
     $("#joePg").css('display','none')
@@ -653,6 +697,7 @@ $("#vazifdar").click(function(){
 })
 
 $("#secondshift").click(function(){
+    $('html, body').animate({scrollTop: '0px'}, 0);
     $("#secondshiftPg").css('display','block')
     $("#miramuiPg").css('display','none')
     $("#editorialPg").css('display','none')
@@ -661,7 +706,7 @@ $("#secondshift").click(function(){
 })
 
 $("#web").click(function(){
-
+    $('html, body').animate({scrollTop: '0px'}, 0);
     $("#webPg").toggle()
     $("#dot").css('display','none')
             $("#placeholder").addClass("fade")
@@ -718,6 +763,7 @@ $("#web").click(function(){
 })
 
 $("#baldwin").click(function(){
+    $('html, body').animate({scrollTop: '0px'}, 0);
     $("#baldwinPg").css('display','block')
     $("#vazifdarPg").css('display','none')
     $("#webPg").css('display','none')
@@ -729,6 +775,7 @@ $("#baldwin").click(function(){
 })
 
 $("#render2").click(function(){
+    $('html, body').animate({scrollTop: '0px'}, 0);
     $("#baldwinPg").css('display','none')
     $("#vazifdarPg").css('display','none')
     $("#webPg").css('display','none')
@@ -741,6 +788,7 @@ $("#render2").click(function(){
 
 
 $("#misc").click(function(){
+    $('html, body').animate({scrollTop: '0px'}, 0);
 
 $("#miscPg").toggle()
 $("#dot").css('display','none')
@@ -794,6 +842,7 @@ $("#dot").css('display','none')
 });
 
 $("#jewelry").click(function(){
+    $('html, body').animate({scrollTop: '0px'}, 0);
     $("#miscPg").css('display','none')
     $("#divPg").css('display','block')
     $("#miramuiPg").css('display','none')
