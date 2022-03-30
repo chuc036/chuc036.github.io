@@ -223,11 +223,12 @@ cursor: pointer;
   }
 
  #aboutPg{
-  margin-top: 5%;
+  margin-top: 3%;
   width: 60%;
   height: 95%;
   left: 45%;
   position: absolute;
+  line-height: 29px;
   overflow-y: auto;
   display: none;
  }
@@ -401,6 +402,7 @@ height: 610px;
 }
 .projtext-body{
   width: 65%;
+  line-height: 29px;
   font-size: 1vw;
   font-family: Arial, Helvetica, sans-serif;
   margin-top:2%;
