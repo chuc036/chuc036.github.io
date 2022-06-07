@@ -10,10 +10,11 @@
 </head>
 <body>
     <div id="menu">
+        <div class="item" id="homebtn"><a href="https://chu.graphics">home</a></div>
         <div class="item" id="aboutbtn">about</div>
         <div class="item" id="workbtn">work</div>
         <div class="item" id="contactbtn">contact</div>
-        <div class="item" id="homebtn"><a href="https://chu.graphics">home</a></div>
+        
     </div>
     
     <div id="home">
@@ -30,28 +31,29 @@
            <img src="cropped-homepage.png" id="4" class="slide">
         </div>
 
+
         <div id="scrolling-container">
-            <div class="list-item">
-                <a id="omniuser" target="blank" href="omniuserdiv.html">Omniuser Div Branding</a>
+            <div  id="omniuser"class="list-item">
+                <a  target="blank" href="omniuserdiv.html">Omniuser Div Branding</a>
                 <div class="list-desc">
                     Accessories design and branding
                     </div>
             </div>
 
-            <div class="list-item">
-                <a id="vazifdar" target="blank" href="vazifdar-branding.html">Vazifdar Branding</a>
+            <div id="vazifdar" class="list-item">
+                <a  target="blank" href="vazifdar-branding.html">Vazifdar Branding</a>
                 <div class="list-desc">
                     Logo design and branding for Jehan Vazifdar
                     </div>
             </div>
-            <div class="list-item">
-                <a id="poster" target="blank" href="posters.html">Poster Designs</a>
+            <div id="poster"  class="list-item">
+                <a target="blank" href="posters.html">Poster Designs</a>
                 <div class="list-desc">
                     Selected client work
                     </div>
             </div>
-            <div class="list-item">
-                <a id="quote" target="blank" href="https://www.youtube.com/watch?v=DKWkPyWstAw">Typographic Quote Video</a>
+            <div id="quote" class="list-item">
+                <a  target="blank" href="https://www.youtube.com/watch?v=DKWkPyWstAw">Typographic Quote Video</a>
                <div class="list-desc">
                 Public typography video
                 </div>
@@ -205,11 +207,13 @@
     <script>
         $( document ).ready(function() {
         console.log( "ready!" );
-});
-$("#1").css('display','block')
+        });
+            $("#1").css('display','block')
             $("#2").css('display','none')
             $("#3").css('display','none')
             $("#4").css('display','none')
+
+
         //Slideshow functionality
         $("#vazifdar").mouseenter(function(){
             $("#2").css('display','block')
@@ -235,6 +239,28 @@ $("#1").css('display','block')
             $("#1").css('display','none')
             $("#3").css('display','none')
         })
+
+        //Mobile functionality
+
+        if($(window).width() < 768){
+            $('.slide').css('margin-bottom','53%')
+            $('#omniuser').css('width','100%')
+            $('#omniuser').css('margin-bottom','106%')
+            $('#vazifdar').css('margin-bottom','110%')
+            $("#3").css('display','block')
+            $('#poster').css('margin-bottom','110%')
+            $("#2").css('display','block')
+            $("#1").css('display','block')
+            $("#4").css('display','block')
+
+}else{
+    $("#1").css('display','block')
+            $("#2").css('display','none')
+            $("#3").css('display','none')
+            $("#4").css('display','none')
+};
+        
+    
 
         //about appearance
         $("#aboutbtn").click(function(){
