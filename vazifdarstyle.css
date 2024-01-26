@@ -1,0 +1,11 @@
+.center{
+    position: absolute;
+    width: 100%;
+    top: 32%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#logo{
+    width: 80%;
+}
